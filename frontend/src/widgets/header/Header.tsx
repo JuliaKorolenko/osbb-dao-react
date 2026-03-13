@@ -1,24 +1,18 @@
-import Select from "@/shared/ui/select";
+import type { AccountInfo } from "@/shared/types/common";
 import styles from "./Header.module.css";
+import SelectAddress from "@/widgets/account-select";
 
 const Header = () => {
-  const accounts = [
-    { address: "0xf39F...2266", name: "Admin" },
-    { address: "0x7099...79C8", name: "User 1" },
-    { address: "0x3C44...93BC", name: "User 2" },
-    { address: "0x90F7...b906", name: "User 3" },
-    { address: "0x15d3...6A65", name: "" },
-    { address: "0x15d3...6A65", name: "" },
-    { address: "0x15d3...6A65", name: "" },
-    { address: "0x15d3...6A65", name: "" },
-    { address: "0x15d3...6A65", name: "" },
-    { address: "0x15d3...6A65", name: "" },
-    { address: "0x15d3...6A65", name: "" },
-    { address: "0x9965...A4dc", name: "" },
-    { address: "0x976E...0aa9", name: "" },
-    { address: "0x14dC...9955", name: "" },
-    { address: "0x2361...1E8f", name: "" },
-    { address: "0xa0Ee...9720", name: "" },
+  const accounts: AccountInfo[] = [
+    { address: "0xf39F...2266", name: "Admin", role: "admin" },
+    { address: "0x7099...79C8", name: "Member 1", role: "member" },
+    { address: "0x3C44...93BC", name: "Member 2", role: "member" },
+    { address: "0x90F7...b906", name: "Member 3", role: "member" },
+    { address: "0x9965...A4dc", name: "", role: "guest" },
+    { address: "0x976E...0aa9", name: "", role: "guest" },
+    { address: "0x14dC...9955", name: "", role: "guest" },
+    { address: "0x2361...1E8f", name: "", role: "guest" },
+    { address: "0xa0Ee...9720", name: "", role: "guest" },
     // "0xBcd4...4096",
     // "0x71bE...5788",
     // "0xFABB...694a",
@@ -40,7 +34,7 @@ const Header = () => {
         </div>
       </div>
       <div className={styles.walletInfo}>
-        <Select data={accounts} />
+        <SelectAddress data={accounts} />
         <div className={styles.statusDot}></div>
       </div>
     </div>
