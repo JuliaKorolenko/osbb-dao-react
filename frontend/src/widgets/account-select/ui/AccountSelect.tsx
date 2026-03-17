@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import type { AccountInfo } from "@/shared/types/common";
 import { roleConfig } from "../model/roleConfig";
-import { useClickOutsideEsc } from "@/shared/hooks/useClickOutsideESC";
+import { useClickOutsideEsc } from "@/shared/hooks/useClickOutsideEsc";
 import AccountView from "./AccountView";
 import styles from "./AccountSelect.module.css";
 

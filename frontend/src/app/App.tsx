@@ -2,11 +2,7 @@ import "./styles";
 import DashboardPage from "@/pages/dashboard";
 
 function App() {
-  return (
-    <div className="container">
-      <DashboardPage />
-    </div>
-  );
+  return <DashboardPage />;
 }
 
 export default App;
