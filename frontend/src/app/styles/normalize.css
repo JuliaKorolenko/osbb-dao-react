@@ -133,8 +133,10 @@ body {
 /**
   Нормализация высоты элемента ссылки при его инспектировании в DevTools
  */
-a:where([class]) {
-  display: inline-flex;
+a {
+  text-decoration: none;
+  color: inherit;
+  line-height: inherit;
 }
 
 /**
