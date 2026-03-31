@@ -1,3 +1,12 @@
+type StatConfigItem = {
+  key: "balance" | "residents" | "proposals" | "votes";
+  title: string;
+  icon: string;
+  iconColor: string;
+  subtitle: string;
+  isBalance?: boolean;
+};
+
 export const statsConfig = [
   {
     key: "balance",
@@ -8,7 +17,7 @@ export const statsConfig = [
     subtitle: "Фонд будинку",
   },
   {
-    key: "members",
+    key: "residents",
     title: "Мешканців",
     icon: "👥",
     iconColor: "green",
@@ -31,9 +40,15 @@ export const statsConfig = [
     isBalance: false,
     subtitle: "м² квартира",
   },
-] as const;
+] satisfies readonly StatConfigItem[];
 
-type StatConfigItem = (typeof statsConfig)[number];
-export type StatsData = Omit<StatConfigItem, "key"> & {
+export type StatKey = (typeof statsConfig)[number]["key"];
+
+export type StatCardProps = Omit<StatConfigItem, "key"> & {
   value: string | number;
 };
+
+// type StatConfigItem = (typeof statsConfig)[number];
+// export type StatsData = Omit<StatConfigItem, "key"> & {
+//   value: string | number;
+// };

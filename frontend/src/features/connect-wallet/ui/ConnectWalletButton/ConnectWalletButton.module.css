@@ -1,0 +1,29 @@
+.connectButton {
+  border-radius: 10px;
+  padding: 9px;
+  width: 120px;
+  font-size: 12px;
+  border: 1px solid #e3ddf2;
+  background: transparent;
+  color: #7a6899;
+  cursor: pointer;
+  font-family: sans-serif;
+  transition:
+    border-color 0.15s,
+    color 0.15s,
+    background 0.15s,
+    transform 0.1s;
+}
+
+.connectButton:hover {
+  border-color: #c4b4e8;
+  color: #4a2d99;
+  background: #f0ebff;
+}
+
+.connectButton:active {
+  border-color: #a890d8;
+  background: #e8deff;
+  color: #3a2080;
+  transform: scale(0.98);
+}

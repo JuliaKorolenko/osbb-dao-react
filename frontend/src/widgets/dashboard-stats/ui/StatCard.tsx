@@ -1,4 +1,4 @@
-import type { StatsData } from "../model/statsConfig";
+import type { StatCardProps } from "../model/statsConfig";
 import styles from "./DashboardStats.module.css";
 
 const StatCard = ({
@@ -8,7 +8,7 @@ const StatCard = ({
   subtitle,
   isBalance = false,
   value,
-}: StatsData) => {
+}: StatCardProps) => {
   return (
     <div className={styles.statCard}>
       <div className={styles.statCardHeader}>

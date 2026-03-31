@@ -37,16 +37,102 @@
   font-size: 14px;
 }
 
-.walletInfo {
+.wallet {
   display: flex;
   align-items: center;
   gap: 15px;
 }
 
+.walletInfo {
+  display: flex;
+  align-items: stretch;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #e3ddf2;
+  background: #f7f5fb;
+  font-size: 12.5px;
+  font-family: "SF Mono", monospace;
+  transition:
+    border-color 0.15s,
+    background 0.15s;
+}
+
+/* .walletInfo:hover {
+  border-color: #c4b4e8;
+  background: #f0ebff;
+} */
+
+.walletStatus {
+  width: 30px;
+  background: #ede8f8;
+  border-right: 1px solid #e3ddf2;
+  align-content: center;
+}
+
+.walletAddress {
+  padding: 8px 10px;
+  color: #3d2d62;
+  width: 140px;
+  text-align: center;
+}
+
+.walletAddress.disabled {
+  opacity: 0.5;
+}
+
 .statusDot {
-  width: 12px;
-  height: 12px;
-  background: #10b981;
+  width: 6px;
+  height: 6px;
+  background: #bbb;
   border-radius: 50%;
+  margin: auto;
+}
+
+.statusDot.online {
+  background: #10b981;
   animation: pulse 2s infinite;
+}
+
+.walletCopy {
+  width: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #c4b4e8;
+  cursor: pointer;
+  font-size: 13px;
+  color: #9b8ec4;
+  transition:
+    background 0.15s,
+    color 0.15s;
+  border-radius: 6px;
+  margin: 3px;
+}
+
+.walletCopy:not(.disabled):hover {
+  background: #ede8f8;
+  color: #5c33b0;
+}
+
+.walletCopy.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.checkIcon {
+  color: #10b981;
+  /* padding: 0 1px; */
+  /* width: 19px; */
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
