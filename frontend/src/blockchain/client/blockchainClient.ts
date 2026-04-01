@@ -1,8 +1,8 @@
 import { createPublicClient, http } from "viem";
 import { hardhat } from "viem/chains";
-import { NETWORK_CONFIG } from "@/shared/config/contract";
+import { ENV } from "@/shared/config/env";
 
 export const publicClient = createPublicClient({
   chain: hardhat,
-  transport: http(NETWORK_CONFIG.RPC_URL),
+  transport: http(ENV.RPC_URL),
 });

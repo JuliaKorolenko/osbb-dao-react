@@ -1,14 +1,16 @@
 import { statsConfig } from "../model/statsConfig";
 import StatCard from "./StatCard";
-import { useDAOStats } from "@/entities/dao/useDAOStats";
+import { useDAOStats } from "@/entities/dao/model/useDAOStats";
 import { useDaoStore } from "@/store/dao/daoStore";
-import { useResidentInfo } from "@/entities/wallet/useResidentInfo";
+import { useResidentInfo } from "@/entities/wallet";
 import { useWalletStore } from "@/store/wallet/walletStore";
+import { useTranslation } from "react-i18next";
 import styles from "./DashboardStats.module.css";
 
 type StatKey = (typeof statsConfig)[number]["key"];
 type StatsData = Partial<Record<StatKey, number | string>>;
 const DashboardStats = () => {
+  const { t } = useTranslation();
   useDAOStats();
   useResidentInfo();
 
@@ -35,23 +37,26 @@ const DashboardStats = () => {
         return `${areaValue} ${configMap[key].subtitle}`;
       }
       default:
-        return configMap[key].subtitle;
+        return t(configMap[key].subtitle);
     }
   };
 
   return (
     <div className={styles.statsGrid}>
       {statsConfig.map((item) => {
-        const { key, ...props } = item;
+        const { key, isBalance, ...props } = item;
         const value = statsData[key] ?? 0;
+        const curValue = isBalance ? `${value} ETH` : value;
 
         const subtitle = getCurrentSubtitle(key);
+
+        console.log(">>> subtitle", t(key));
 
         return (
           <StatCard
             key={key}
             {...props}
-            value={value}
+            value={curValue}
             subtitle={subtitle}
           />
         );

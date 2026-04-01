@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getResidentInfo } from "@/blockchain/contracts/daoContract";
+import { getResidentInfo, isAdmin } from "@/blockchain/contracts/daoContract";
 import { useWalletStore } from "@/store/wallet/walletStore";
 // import type { Address } from "abitype";
 
@@ -7,6 +7,7 @@ interface ResidentInfoType {
   votingPower: bigint;
   area: bigint;
   isActive: boolean;
+  isAdmin?: boolean;
 }
 
 export const useResidentInfo = () => {
@@ -30,12 +31,15 @@ export const useResidentInfo = () => {
           boolean,
         ];
 
+        const isAdminUser = await isAdmin(address);
+
         const [apartmentArea, votingPower, isActive] = result;
 
         setResidentInfo({
           votingPower: Number(votingPower),
           area: Number(apartmentArea),
           isActive: isActive,
+          isAdmin: isAdminUser,
         });
       } catch (error) {
         console.error("Error fetching resident info:", error);

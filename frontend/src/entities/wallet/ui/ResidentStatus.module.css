@@ -1,0 +1,26 @@
+.residentStatus {
+  position: absolute;
+  top: 100%;
+  /* right: 0; */
+}
+
+.bageResident {
+  background: #e1f5ee;
+  color: #0f6e56;
+  padding: 2px 8px;
+  border-radius: 5px;
+  font-size: 10px;
+  font-weight: 500;
+  white-space: nowrap;
+  margin-right: 2px;
+}
+
+.bageResident.guest {
+  background: #f1efe8;
+  color: #5f5e5a;
+}
+
+.bageResident.admin {
+  background: #faeeda;
+  color: #854f0b;
+}

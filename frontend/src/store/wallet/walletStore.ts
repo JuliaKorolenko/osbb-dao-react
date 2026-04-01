@@ -5,6 +5,7 @@ interface ResidentInfo {
   votingPower: number;
   area: number;
   isActive: boolean;
+  isAdmin?: boolean;
 }
 interface WalletStore {
   address: Address | null;

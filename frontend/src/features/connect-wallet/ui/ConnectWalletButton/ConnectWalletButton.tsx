@@ -1,5 +1,5 @@
 import { memo } from "react";
-import { useConnectWallet } from "../../hooks/useConnectWallet";
+import { useConnectWallet } from "../../model/useConnectWallet";
 import styles from "./ConnectWalletButton.module.css";
 
 const ConnectWalletButtonComponent = () => {
