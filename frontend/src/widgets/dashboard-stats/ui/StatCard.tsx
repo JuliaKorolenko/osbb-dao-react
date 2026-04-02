@@ -11,7 +11,7 @@ const StatCard = ({
 }: StatCardProps) => {
   const { t, i18n } = useTranslation();
 
-  // console.log(">>> lang", title);
+  console.log(">>> lang", i18n.language);
 
   return (
     <div className={styles.statCard}>

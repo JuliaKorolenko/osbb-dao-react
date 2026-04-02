@@ -50,7 +50,7 @@ const DashboardStats = () => {
 
         const subtitle = getCurrentSubtitle(key);
 
-        console.log(">>> subtitle", t(key));
+        // console.log(">>> subtitle", t(key));
 
         return (
           <StatCard
