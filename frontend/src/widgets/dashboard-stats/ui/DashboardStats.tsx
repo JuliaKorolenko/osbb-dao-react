@@ -31,13 +31,13 @@ const DashboardStats = () => {
   const getCurrentSubtitle = (key: StatKey) => {
     switch (key) {
       case "residents":
-        return `${totalArea} м² загальна площа`;
+        return `${totalArea} ${t(configMap[key].sublabel)}`;
       case "votes": {
         const areaValue = `${residentInfo?.area ?? "0"}`;
-        return `${areaValue} ${configMap[key].subtitle}`;
+        return `${areaValue} ${t(configMap[key].sublabel)}`;
       }
       default:
-        return t(configMap[key].subtitle);
+        return t(configMap[key].sublabel);
     }
   };
 
@@ -48,16 +48,16 @@ const DashboardStats = () => {
         const value = statsData[key] ?? 0;
         const curValue = isBalance ? `${value} ETH` : value;
 
-        const subtitle = getCurrentSubtitle(key);
+        const curSublabel = getCurrentSubtitle(key);
 
-        // console.log(">>> subtitle", t(key));
+        // console.log(">>> sublabel", t(key));
 
         return (
           <StatCard
             key={key}
             {...props}
             value={curValue}
-            subtitle={subtitle}
+            sublabel={curSublabel}
           />
         );
       })}

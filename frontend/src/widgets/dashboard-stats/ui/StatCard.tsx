@@ -3,10 +3,10 @@ import { useTranslation } from "react-i18next";
 import styles from "./DashboardStats.module.css";
 
 const StatCard = ({
-  title,
+  label,
   icon,
   iconColor,
-  subtitle,
+  sublabel,
   value,
 }: StatCardProps) => {
   const { t } = useTranslation();
@@ -16,9 +16,9 @@ const StatCard = ({
       <div className={styles.statCardHeader}>
         <div className={`${styles.statIcon} ${styles[iconColor]}`}>{icon}</div>
       </div>
-      <div className={styles.statLabel}>{t(title)}</div>
+      <div className={styles.statLabel}>{t(label)}</div>
       <div className={styles.statValue}>{value}</div>
-      <div className={styles.statSubtitle}>{subtitle}</div>
+      <div className={styles.statSubtitle}>{t(sublabel)}</div>
     </div>
   );
 };

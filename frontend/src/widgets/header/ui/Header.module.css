@@ -27,15 +27,26 @@
   font-size: 24px;
 }
 
+.logoText {
+  position: relative;
+}
+
 .logoText h1 {
   font-size: 28px;
   color: #333;
   margin-bottom: 5px;
 }
 
-.logoText p {
+.description {
   color: #666;
   font-size: 14px;
+}
+
+.subtitle {
+  font-size: 11px;
+  position: absolute;
+  bottom: 18px;
+  opacity: 0.6;
 }
 
 .wallet {

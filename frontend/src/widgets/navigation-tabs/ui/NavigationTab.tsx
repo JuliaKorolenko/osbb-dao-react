@@ -1,8 +1,11 @@
 import { NavLink } from "react-router-dom";
 import type { NavigationData } from "../model/NavigationConfig";
+import { useTranslation } from "react-i18next";
 import styles from "./NavigationTabs.module.css";
 
-const NavigationTab = ({ title, icon, path }: NavigationData) => {
+const NavigationTab = ({ label, icon, path }: NavigationData) => {
+  const { t } = useTranslation();
+
   return (
     <NavLink
       to={path}
@@ -11,7 +14,7 @@ const NavigationTab = ({ title, icon, path }: NavigationData) => {
       }
     >
       <span className={styles.icon}>{icon}</span>
-      <span>{title}</span>
+      <span>{t(label)}</span>
     </NavLink>
   );
 };

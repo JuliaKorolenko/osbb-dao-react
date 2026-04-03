@@ -1,6 +1,38 @@
 {
-  "balance": "Balance",
-  "residents": "Residents",
-  "proposals": "Proposals",
-  "votes": "Your vote"
+  "header": {
+    "hoa-title": "HOA DAO",
+    "hoa-subtitle": "Homeowners Association",
+    "description": "Decentralized building management system"
+  },
+  "navigation": {
+    "proposals": "Proposals",
+    "residents": "Residents",
+    "create": "Create",
+    "register": "Registration",
+    "devTools": "Dev tools"
+  },
+  "dashboard": {
+    "balance": "Balance of HOA",
+    "residents": "Residents",
+    "proposals": "Proposals",
+    "votes": "Your vote",
+    "fund": "Building fund",
+    "total-area": "m² total area",
+    "proposals-created": "Proposals created",
+    "appartment-area": "m² apartment area"
+  },
+  "common": {
+    "admin": "Admin",
+    "resident": "Resident",
+    "guest": "Guest",
+    "copy-address": "Copy address",
+    "copied": "Copied!"
+  },
+  "buttons": {
+    "vote": "Vote",
+    "create-proposal": "Create proposal",
+    "register": "Register",
+    "connect-wallet": "Connect wallet",
+    "disconnect-wallet": "Disconnect wallet"
+  }
 }

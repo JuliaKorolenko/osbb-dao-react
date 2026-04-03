@@ -1,8 +1,10 @@
+import { useTranslation } from "react-i18next";
 import { memo } from "react";
 import { useConnectWallet } from "../../model/useConnectWallet";
 import styles from "./ConnectWalletButton.module.css";
 
 const ConnectWalletButtonComponent = () => {
+  const { t } = useTranslation();
   const { connect, disconnect, isConnected } = useConnectWallet();
 
   if (isConnected) {
@@ -12,7 +14,7 @@ const ConnectWalletButtonComponent = () => {
           className={styles.connectButton}
           onClick={disconnect}
         >
-          Disconnect
+          {t("buttons.disconnect-wallet")}
         </button>
       </div>
     );
@@ -22,7 +24,7 @@ const ConnectWalletButtonComponent = () => {
         className={styles.connectButton}
         onClick={connect}
       >
-        Connect Wallet
+        {t("buttons.connect-wallet")}
       </button>
     );
   }

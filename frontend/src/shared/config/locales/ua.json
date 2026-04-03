@@ -1,6 +1,38 @@
 {
-  "balance": "Баланс",
-  "residents": "Мешканців",
-  "proposals": "Пропозицій",
-  "votes": "Ваш голос"
+  "header": {
+    "hoa-title": "ОСББ DAO",
+    "description": "Децентралізоване управління будинком"
+  },
+  "navigation": {
+    "proposals": "Пропозиції",
+    "residents": "Мешканці",
+    "create": "Створити",
+    "register": "Реєстрація",
+    "devTools": "Dev tools"
+  },
+
+  "dashboard": {
+    "balance": "Баланс ОСББ",
+    "residents": "Мешканців",
+    "proposals": "Пропозицій",
+    "votes": "Ваш голос",
+    "fund": "Фонд будинку",
+    "total-area": "м² загальна площа",
+    "proposals-created": "Всього створено",
+    "appartment-area": "м² квартира"
+  },
+  "common": {
+    "admin": "Адмін",
+    "resident": "Мешканець",
+    "guest": "Гість",
+    "copy-address": "Копіювати адресу",
+    "copied": "Скопійовано!"
+  },
+  "buttons": {
+    "vote": "Голосувати",
+    "create-proposal": "Створити пропозицію",
+    "register": "Зареєструватися",
+    "connect-wallet": "Підключити гаманець",
+    "disconnect-wallet": "Відключити гаманець"
+  }
 }

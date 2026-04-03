@@ -1,9 +1,11 @@
+import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import { useWalletStore } from "@/store/wallet/walletStore";
 import { formatAddress } from "@/shared/lib/formatAddress";
 import styles from "./WalletInfo.module.css";
 
 export const WalletInfo = () => {
+  const { t } = useTranslation();
   const { address, isConnected } = useWalletStore((state) => state);
 
   const shortAddress = formatAddress(address);
@@ -37,7 +39,7 @@ export const WalletInfo = () => {
       <div
         className={`${styles.walletCopy} ${isConnected ? "" : styles.disabled}`}
         onClick={copyAddress}
-        title="Copy address"
+        title={isCopied ? t("common.copied") : t("common.copy-address")}
       >
         {isCopied ? (
           <span className={styles.checkIcon}>✓</span>

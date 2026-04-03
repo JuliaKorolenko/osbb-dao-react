@@ -1,31 +1,31 @@
 export const NavigationConfig = [
   {
     key: "proposals",
-    title: "Пропозицій",
+    label: "navigation.proposals",
     icon: "📋",
     path: "/",
   },
   {
     key: "create",
-    title: "Створити",
+    label: "navigation.create",
     icon: "➕",
     path: "/create",
   },
   {
     key: "residents",
-    title: "Мешканці",
+    label: "navigation.residents",
     icon: "👥",
     path: "/residents",
   },
   {
     key: "register",
-    title: "Реєстрація",
+    label: "navigation.register",
     icon: "📝",
     path: "/registration",
   },
   {
     key: "devTools",
-    title: "Dev tools",
+    label: "navigation.devTools",
     icon: "🛠️",
     path: "/dev-tools",
   },

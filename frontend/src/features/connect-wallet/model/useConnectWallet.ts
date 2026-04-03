@@ -24,11 +24,6 @@ export const useConnectWallet = () => {
     if (!metamsk) throw new Error("MetaMask not found");
 
     await connect(wagmiConfig, { connector: metamsk });
-
-    // const updatedConnections = getConnections();
-    // const conn = updatedConnections[0];
-    // setAddress(conn?.accounts?.[0] ?? null);
-    // setIsConnected(updatedConnections.length > 0);
   }, []);
 
   const disconnectWallet = useCallback(async () => {

@@ -1,44 +1,44 @@
 type StatConfigItem = {
   key: "balance" | "residents" | "proposals" | "votes";
-  title: string;
+  label: string;
   icon: string;
   iconColor: string;
-  subtitle: string;
+  sublabel: string;
   isBalance?: boolean;
 };
 
 export const statsConfig = [
   {
     key: "balance",
-    title: "Баланс ОСББ",
+    label: "dashboard.balance",
     icon: "💰",
     iconColor: "purple",
     isBalance: true,
-    subtitle: "Фонд будинку",
+    sublabel: "dashboard.fund",
   },
   {
     key: "residents",
-    title: "Мешканців",
+    label: "dashboard.residents",
     icon: "👥",
     iconColor: "green",
     isBalance: false,
-    subtitle: "м² загальна площа",
+    sublabel: "dashboard.total-area",
   },
   {
     key: "proposals",
-    title: "Пропозицій",
+    label: "dashboard.proposals",
     icon: "📋",
     iconColor: "blue",
     isBalance: false,
-    subtitle: "Всього створено",
+    sublabel: "dashboard.proposals-created",
   },
   {
     key: "votes",
-    title: "Ваш голос",
+    label: "dashboard.votes",
     icon: "🗳️",
     iconColor: "orange",
     isBalance: false,
-    subtitle: "м² квартира",
+    sublabel: "dashboard.appartment-area",
   },
 ] satisfies readonly StatConfigItem[];
 

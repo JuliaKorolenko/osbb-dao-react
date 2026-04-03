@@ -30,3 +30,8 @@
   color: #31313d;
   background: #deddf9;
 }
+
+.icon {
+  position: relative;
+  top: -1px;
+}
