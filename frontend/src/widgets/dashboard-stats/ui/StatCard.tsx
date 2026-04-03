@@ -9,9 +9,7 @@ const StatCard = ({
   subtitle,
   value,
 }: StatCardProps) => {
-  const { t, i18n } = useTranslation();
-
-  console.log(">>> lang", i18n.language);
+  const { t } = useTranslation();
 
   return (
     <div className={styles.statCard}>

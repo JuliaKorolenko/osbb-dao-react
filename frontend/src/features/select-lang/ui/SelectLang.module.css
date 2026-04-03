@@ -1,0 +1,13 @@
+.selectLang {
+  position: relative;
+}
+
+.selectLang::after {
+  content: "";
+  position: absolute;
+  top: -9px;
+  left: -20px;
+  width: 1px;
+  height: 50px;
+  background-color: #e4dcf2;
+}

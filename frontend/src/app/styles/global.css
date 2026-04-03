@@ -23,6 +23,7 @@ body {
 
 .select-header {
   width: 100%;
+  min-width: 60px;
   padding: 5px 12px;
   border: 1px solid #ccc;
   border-radius: 6px;
@@ -82,8 +83,9 @@ body {
 }
 
 .select-item {
-  padding: 12px 12px 10px 20px;
+  padding: 6px 2px;
   margin-bottom: 2px;
+  text-align: center;
   cursor: pointer;
   position: relative;
 }

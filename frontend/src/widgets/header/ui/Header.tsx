@@ -1,14 +1,8 @@
 import styles from "./Header.module.css";
-import { ConnectedWalletButton } from "@/features/connect-wallet";
-import { ResidentStatus, WalletInfo } from "@/entities/wallet";
+import { HeaderPanel } from "./HeaderPanel";
 import { SelectLang } from "@/features/select-lang/ui/SelectLang";
 
 const Header = () => {
-  const setLanguage = (lang: string) => {
-    localStorage.setItem("lang", lang);
-    window.location.reload();
-    console.log(">>> setLanguage", lang);
-  };
   return (
     <div className={styles.header}>
       <div className={styles.logo}>
@@ -19,11 +13,9 @@ const Header = () => {
         </div>
       </div>
       <div className={styles.wallet}>
-        <WalletInfo />
-        <ConnectedWalletButton />
-        <ResidentStatus />
-        <SelectLang />
+        <HeaderPanel />
       </div>
+      <SelectLang />
     </div>
   );
 };
