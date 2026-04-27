@@ -1,31 +1,37 @@
 import { Route, Routes } from "react-router-dom";
+import ProposalsPage from "@/pages/proposals";
+import CreateProposalsPage from "@/pages/create-proposal";
+import ResidentsPage from "@/pages/residents";
+import RegisterResidentPage from "@/pages/register-resident";
+import DevToolsPage from "@/pages/dev-tools";
+import NotFoundPage from "@/pages/not-found";
 
 const AppRouter = () => {
   return (
     <Routes>
       <Route
         path="*"
-        element={<div>404 Page not found</div>}
+        element={<NotFoundPage />}
       />
       <Route
         path="/"
-        element={<div>Proposals Page</div>}
+        element={<ProposalsPage />}
       />
       <Route
         path="/create"
-        element={<div>Proposal Create Page</div>}
+        element={<CreateProposalsPage />}
       />
       <Route
         path="/residents"
-        element={<div>Residents Page</div>}
+        element={<ResidentsPage />}
       />
       <Route
         path="/registration"
-        element={<div>Registration Page</div>}
+        element={<RegisterResidentPage />}
       />
       <Route
         path="/dev-tools"
-        element={<div>DevTools Page</div>}
+        element={<DevToolsPage />}
       />
       {/* <Route path="/" element={<ProposalsPage />} />
     <Route path="/create" element={<CreateProposalPage />} />

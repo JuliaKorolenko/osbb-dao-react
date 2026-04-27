@@ -34,5 +34,31 @@
     "register": "Register",
     "connect-wallet": "Connect wallet",
     "disconnect-wallet": "Disconnect wallet"
+  },
+  "pages": {
+    "proposals": {
+      "title": "Proposals",
+      "subtitle": "All building management proposals"
+    },
+    "create-proposal": {
+      "title": "Create Proposal",
+      "subtitle": "Create a new proposal for building management"
+    },
+    "residents": {
+      "title": "Residents",
+      "subtitle": "List of all residents in the building"
+    },
+    "registration": {
+      "title": "Registration",
+      "subtitle": "Register as a resident of the building"
+    },
+    "dev-tools": {
+      "title": "Dev Tools",
+      "subtitle": "Developer tools for testing and debugging"
+    },
+    "not-found": {
+      "title": "Page not found",
+      "subtitle": "The page you are looking for does not exist"
+    }
   }
 }
