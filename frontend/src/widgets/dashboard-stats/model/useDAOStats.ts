@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { getDAOStats } from "@/blockchain/contracts/daoContract";
+import { getDAOStats } from "@/blockchain/contracts/dao";
 import { useDaoStore } from "@/store/dao/daoStore";
 import { formatEther } from "viem";
 

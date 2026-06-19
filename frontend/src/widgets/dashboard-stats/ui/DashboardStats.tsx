@@ -1,8 +1,8 @@
 import { statsConfig } from "../model/statsConfig";
 import StatCard from "./StatCard";
-import { useDAOStats } from "@/entities/dao/model/useDAOStats";
+import { useDAOStats } from "../model/useDAOStats";
 import { useDaoStore } from "@/store/dao/daoStore";
-import { useResidentInfo } from "@/entities/wallet";
+import { useResidentInfo } from "@/entities/resident";
 import { useWalletStore } from "@/store/wallet/walletStore";
 import { useTranslation } from "react-i18next";
 import styles from "./DashboardStats.module.css";
